@@ -1,0 +1,28 @@
+# Django
+Django==4.2.2
+
+# Django-filters
+django-filter==23.2
+
+# Decouple
+python-decouple==3.8
+
+# Pillow 
+Pillow==9.5.0
+
+# Postgres
+psycopg2==2.9.6
+
+# Django Rest Framework
+djangorestframework==3.14.0
+django-cors-headers==4.1.0
+
+# Redis
+redis==4.5.5
+
+# Django-rq
+django-rq==2.8.1
+
+# JWT
+djangorestframework-simplejwt==5.2.2
+
