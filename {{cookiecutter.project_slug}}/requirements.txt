@@ -13,16 +13,24 @@ Pillow==9.5.0
 # Postgres
 psycopg2==2.9.6
 
+{% if cookiecutter.use_drf == 'y' %}
 # Django Rest Framework
 djangorestframework==3.14.0
 django-cors-headers==4.1.0
+{% endif %}
 
+{% if cookiecutter.use_redis == 'y' %}
 # Redis
 redis==4.5.5
+{% endif %}
 
+{% if cookiecutter.use_django_rq == 'y' %}
 # Django-rq
 django-rq==2.8.1
+{% endif %}
 
+{% if cookiecutter.use_simple_jwt == 'y' %}
 # JWT
 djangorestframework-simplejwt==5.2.2
+{% endif %}
 

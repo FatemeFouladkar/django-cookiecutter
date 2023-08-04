@@ -16,5 +16,5 @@
     "use_drf": "y",
     "use_redis": "y",
     "use_django_rq": "y",
-    "user_simple_jwt": "y"
+    "use_simple_jwt": "y"
   }
