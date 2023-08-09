@@ -11,11 +11,12 @@
       "Apache Software License 2.0",
       "Not open source"
     ],
-    "username_type": ["username", "email"],
     "timezone": "UTC",
+    "username_type": ["username", "email"],
     "use_docker": "y",
     "use_drf": "y",
     "use_redis": "y",
     "use_django_rq": "y",
+    "use_async": "y",
     "use_simple_jwt": "y"
   }

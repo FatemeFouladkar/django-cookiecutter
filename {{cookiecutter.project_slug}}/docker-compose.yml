@@ -5,8 +5,16 @@ services:
   web:
     build: .
     command: >
-            bash -c "python manage.py runserver 0.0.0.0:8000
-                    & python manage.py rqworker default --with-scheduler"
+            bash -c "
+            {% if cookiecutter.use_async == 'y' %}
+              uvicorn config.asgi:application --host 0.0.0.0 --port 8000
+            {% else %}
+              python manage.py runserver 0.0.0.0:8000
+            {% endif %}
+            {% if cookiecutter.use_django_rq == 'y' %}        
+                & python manage.py rqworker default --with-scheduler
+            {% endif %}
+            "
     volumes:
       - .:/code
       - ./static:/static
