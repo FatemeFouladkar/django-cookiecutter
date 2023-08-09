@@ -11,6 +11,7 @@
       "Apache Software License 2.0",
       "Not open source"
     ],
+    "username_type": ["username", "email"],
     "timezone": "UTC",
     "use_docker": "y",
     "use_drf": "y",
