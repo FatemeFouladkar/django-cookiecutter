@@ -2,9 +2,9 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-
+{% if cookiecutter.use_simple_jwt == 'y' %}
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-
+{% endif %}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
