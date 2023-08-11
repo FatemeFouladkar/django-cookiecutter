@@ -6,10 +6,20 @@ from users.managers.user import UserManager
 
 
 class User(AbstractUser):
-    first_name = None  # type: ignore
-    last_name = None  # type: ignore
+    first_name = models.CharField(
+        max_length=200,
+        verbose_name=_('First name'),
+        blank=True,
+        null=True
+    )
+    last_name = models.CharField(
+        max_length=200,
+        verbose_name=_('Last name'),
+        blank=True,
+        null=True
+    )
     {%- if cookiecutter.username_type == "email" %}
-    email = models.EmailField(_("email address"), unique=True)
+    email = models.EmailField(_("Email address"), unique=True)
     username = None
 
     USERNAME_FIELD = "email"
