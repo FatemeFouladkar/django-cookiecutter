@@ -9,7 +9,7 @@ SECRET_KEY = config("SECRET_KEY", default="")
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': config('POSTGRES_NAME'),
         'USER': config('POSTGRES_USER'),
         'PASSWORD': config('POSTGRES_PASSWORD'),
-        'HOST': 'db',
+        'HOST': config('POSTGRES_HOST'),
         'PORT': '5432',
     }
 }
