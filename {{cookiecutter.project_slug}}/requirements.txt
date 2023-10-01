@@ -11,7 +11,7 @@ python-decouple==3.8
 Pillow==9.5.0
 
 # Postgres
-psycopg2==2.9.6
+psycopg2-binary==2.9.8
 
 {% if cookiecutter.use_drf == 'y' %}
 # Django Rest Framework
