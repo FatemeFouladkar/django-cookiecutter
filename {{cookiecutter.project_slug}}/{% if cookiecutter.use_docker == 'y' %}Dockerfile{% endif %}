@@ -14,6 +14,11 @@ COPY . /code/
 
 
 RUN chmod +x /code/entrypoint.sh
+{% if cookiecutter.username_type == 'email' %}
 ENV DJANGO_SUPERUSER_EMAIL=admin@gmail.com
+{% endif %}
+{% elif cookiecutter.username_type == 'username' %}
+ENV DJANGO_SUPERUSER_EMAIL=admin
+{% endif %}
 ENV DJANGO_SUPERUSER_PASSWORD=1234
 ENTRYPOINT ["sh", "/code/entrypoint.sh"]
