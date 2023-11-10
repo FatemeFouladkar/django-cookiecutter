@@ -131,7 +131,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-{% if cookiecutter.use_drf %}
+{% if cookiecutter.use_drf == 'y' %}
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -141,7 +141,7 @@ REST_FRAMEWORK = {
 }
 {% endif %}
 
-{% if cookiecutter.use_simple_jwt %}
+{% if cookiecutter.use_simple_jwt == 'y' %}
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=3),
