@@ -24,9 +24,8 @@ class User(AbstractUser):
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
-
-    objects = UserManager()
     {%- endif %}
+    objects = UserManager()
 
     def __str__(self):
         return f'{self.email} -#{self.id}'
