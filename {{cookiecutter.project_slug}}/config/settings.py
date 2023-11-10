@@ -22,7 +22,7 @@ THIRD_PARTY_APPS = [
     {% if cookiecutter.use_simple_jwt == 'y' %}
     'rest_framework_simplejwt',
     {% endif %}
-    {% if cookiecutter.use_redis == 'y' %}
+    {% if cookiecutter.use_django_rq == 'y' %}
     'django_rq',
     {% endif %}
     'django_filters',
